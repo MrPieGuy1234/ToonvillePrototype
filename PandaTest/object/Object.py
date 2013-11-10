@@ -30,3 +30,5 @@ class Object:
         self.parent.setScale(x,y,z)
     def setParent(self, parent):
         self.parent.reparentTo(parent)
+    def place(self):
+        self.parent.place()

@@ -13,9 +13,9 @@ class Zone:
         Zone.map = Loader.loadModel(mapModel)
     def addObjectsOnLoad(self, objects):
         if isinstance(objects, collections.Iterable):
-            pass
+            self.modelList.extend(objects)
         else:
-            pass
+            self.modelList.append(objects)
     def load(self):
         pass
     def unload(self):
