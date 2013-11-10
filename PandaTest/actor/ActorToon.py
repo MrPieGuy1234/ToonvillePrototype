@@ -31,6 +31,7 @@ class ActorToon(Actor):
             self.loop(defaultAnimation)
             self.attach("head", "torso", "def_head")
             self.attach("torso", "legs", "joint_hips")
+            self.ls()
         except IOError:
             Log.sendError("err")
             Actor.__init__(self, 'models/err.egg')
@@ -38,3 +39,5 @@ class ActorToon(Actor):
             self.find("**/shoes").hide()
             self.find("**/boots_short").hide()
             self.find("**/boots_long").hide()
+
+        
